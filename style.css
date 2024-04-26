@@ -1,0 +1,501 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+/* Home page */
+
+body {
+  line-height: 1.5; 
+  color: #000000; 
+  background-color: #ffffff;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: 'Bodoni 72 OS', serif;
+  font-weight: 600;
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  line-height: 1.2;
+}
+
+h2 {
+  color: #dc2328;
+  font: bold 169px/1.3 'Bodoni 72 OS', serif;
+  letter-spacing: -4px;
+  text-align: center;
+}
+
+h3 {
+  font: normal 700 65px/1.2 'Bodoni Moda', serif;
+  letter-spacing: -1px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-family: 'Bodoni Moda', serif;
+  letter-spacing: -1px;
+}
+
+p {
+  font-family: 'Bodoni Moda', serif;
+  margin-bottom: 35px;
+  word-spacing: -1.5px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+/* header elements */
+header {
+  position: sticky;
+  top: 0;
+  margin: 0 5px;
+  background-color: #ffffff;
+  border: 5px solid #ff9999;
+  padding: 10px;
+  color: #ff9999;
+  z-index: 2;
+  transition: background-color 0.3s, color 0.3s';
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: auto;
+  align-items: center;
+}
+
+/* collections heading */
+.right-nav {
+  justify-self: right;
+}
+
+.left-nav ul,
+.right-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.left-nav ul li,
+.right-nav ul li {
+  display: inline-block;
+  margin: 0 20px; /* distance from edge of header text to border */
+}
+
+.static-title {
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* swap text and background colour when hovered */
+header:hover {
+  background-color: #ff9999;
+  color: #ffffff;
+}
+
+/* nav static link style */
+nav a:link, nav a:visited, h2 a:link, h2 a:visited {
+  padding: 2px;
+  color: #ff9999; /* when not hovered */
+  text-decoration: none;
+}
+
+/* nav hover link style */
+nav a:hover, h2 a:hover {
+  color: #94948D; /* individual text hover */
+}
+
+/* header hovered not individual text */
+header:hover nav a:link,
+header:hover nav a:visited,
+header:hover h2 a:link,
+header:hover h2 a:visited {
+  color: #ffffff; /* color on pink background */
+}
+
+/* header hovered with individual text */
+header:hover nav a:hover,
+header:hover h2 a:hover {
+  color: #94948D; /* color when individually hovered */
+}
+
+/* introduction */
+.intro {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.text-container {
+ text-align: justify;
+ margin: 20px 50px 20px 100px;
+ 
+}
+
+.intro .main-logo {
+  align-self: center;
+  justify-content: center;
+  height: auto; 
+  width: 85%;
+}
+
+.scroll-down {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.downbutton {
+  text-align: center;
+  background-image: url(assets/blackarrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 8vh;
+  opacity: 30%;
+  padding: 12px 0;
+  border: none;
+}
+
+.downbutton:hover {
+  cursor: pointer;
+}
+
+/* marquee display */
+.wrapper {
+	background-color: #ffffff;
+	height: 190px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	padding: 10px 0px;
+  margin-bottom: 30px;
+}
+
+.wrapper p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20pt;
+  margin: 10px;
+}
+
+.wrapper .logo {
+	width: 150px;
+  padding: 0;
+  margin: 0 30px;
+}
+
+.wrapper .logo img {
+	height: 120px;
+}
+
+.track {
+  display: flex;
+  width: 100%;
+  animation: autoslide 20s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes  autoslide {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.fashion-affair .content {
+  text-align: justify;
+  width: 68vw;
+  margin: 0 auto 10px auto;
+  padding: 20px;
+}
+
+.fashion-affair .content h3 {
+  color: #dc2328;
+}
+
+/* magazine */
+
+.issue-collage {
+  display: grid;
+  grid-template-columns: 1fr; 
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.item {
+  position: relative;
+  display: block;
+  justify-self: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.cover {
+  width: auto;
+  max-width: calc(50% - 5px);
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+}
+
+.centrefold {
+  width: 100%;
+  max-width: calc(50% + 15vw);
+  height: 100%;
+  max-height: calc(60vh - 10px);
+  object-fit: contain;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.item:hover .overlay + .caption {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* about the shoot */
+
+.westfield-info {
+  text-align: justify;
+  width: 70vw;
+  margin: 0 auto 10px auto;
+  padding: 20px;
+}
+
+.westfield-info h3 {
+  color: #dc2328;
+}
+
+/* footer elements */
+footer {
+  background-color: #ff9999;
+  padding: 20px;
+  height: 80px;
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  top: 30%; /* vertically align */
+}
+
+footer a:link, footer a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Meet The Photographer page */
+
+.david-bio h3 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 80px;
+  color: #8ccb8f;
+}
+
+.david-bio h4 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.david-bio p {
+  margin-left: 45px;
+  margin-right: 45px;
+  text-align: justify;
+}
+
+.bio-image {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.portrait img {
+  width: 48vw;
+  height: 90vh;
+  margin-left: 20px;
+  object-fit: cover;
+  flex: 0 0 45%;
+  
+}
+
+.david-bio-2 img {
+  width: 48vw;
+  height: 85vh;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* Collections page */
+
+* {
+	box-sizing: border-box;
+}
+
+.gallery {
+	font-family: 'Bodoni 72 OS', serif;
+	margin: 0;
+	padding: 8px;
+	min-height: 100vh;
+	display: flex;
+  
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery img {
+	width: 100%;
+  height: 60vh;
+	display: block;
+	transition: transform 800ms;
+  object-fit: cover;
+}
+
+.image-grid {
+  display: grid;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 1vw;
+	grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+	max-width: 100%;
+	width: 80vw;
+}
+
+.image-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 12px solid #baa8d1;
+}
+
+figure {
+	position: relative;
+	overflow: hidden;
+  margin: 0;
+}
+
+figure::after {
+  content: '';
+	position: absolute;
+	top: 0;
+  left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(41, 41, 41, 0.5);
+	opacity: 0;
+	transition: opacity 400ms;
+}
+
+figcaption {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  transform: translate(-30%, -30%);
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	opacity: 0;
+	transition: opacity 400ms, transform 400ms;
+  z-index: 1;
+}
+	
+	a:hover figure::after {
+    opacity: 1;
+	}
+
+	a:hover figcaption {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	a:hover img {
+		transform: scale(1.3);
+	}
+
+  .all-info {
+    background-image: url(https://imagedelivery.net/znDGKaxxskgDbNUpqPVRFg/ph-collection-media/images/315865.jpg/w=2560,q=75,metadata=keep);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: auto;
+  }
+
+  .about-gallery {
+    width: 82vw;
+    text-align: justify;
+    margin: 20px auto 0 auto;
+    padding: 25px;
+    background-color: rgba(148, 148, 141, 0.6);
+  }
+ 
+  .about-gallery p {
+    line-height: 1.2;
+    margin-bottom: 15px;
+    word-spacing: -1.7px;
+  }
+
+  .about-gallery h3 {
+    font-size: 58px;
+    margin-top: 15px;
+    padding-top: 10px;
+  }
